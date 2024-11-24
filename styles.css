@@ -1,0 +1,174 @@
+/* Основни стилови за темен модерен дизајн */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #4b6cb7, #310866, #312a4e, #2c1f79);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  color: white;
+}
+
+
+@keyframes gradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Стилови за hero секцијата */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Анимација за насловот */
+.animate-title {
+  animation: slideIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Стилови за описот */
+.description {
+  font-size: 1.2em;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+/* Анимација за описот */
+.animate-fade {
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
+}
+
+
+/* Стилови за модерно копче */
+.modern-button {
+  background-color: #181616;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  opacity: 1;
+  margin-top: 20px;
+}
+
+/* Анимација за копчето */
+.animate-button {
+  animation: bounceIn 1.5s ease-out forwards;
+}
+
+.modern-button:hover {
+  background-color: #3d2766;
+  transform: scale(1.1);
+  color: rgb(0, 0, 0);
+}
+
+.modern-button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: scale(0.5);
+      opacity: 0;
+  }
+  60% {
+      transform: scale(1.2);
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Респонсивен дизајн */
+@media (max-width: 768px) {
+  .hero h2 {
+      font-size: 1.5rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  border-radius: 30px; /* Rounded corners for the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Background of the scrollbar track */
+  border-radius: 30px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #29255c; /* Color of the scrollbar thumb */
+  border-radius: 30px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #40308a; /* Color of the scrollbar thumb on hover */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #29255c #1e1e1e; /* thumb color and track color */
+}

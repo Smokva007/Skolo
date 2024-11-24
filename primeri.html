@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Примери за Кориснички Функции во C++</title>
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="stylesheet" href="stylezaprimeri.css">
+</head>
+<body>
+
+<section class="example-section">
+    <h2>Што се Кориснички Функции во C++?</h2>
+    <p>Во C++, корисничките функции се функции дефинирани од корисникот, кои му овозможуваат на програмерот да ја подели програмата на помали, управливи делови. Тие се користат за организирање и повторно користење на кодот, што го прави кодот почист, полесен за одржување и разбирлив.</p>
+
+    <h3>Пример за корисничка функција</h3>
+    <div class="code-card">
+        <pre><code class="cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int sobiranje(int a, int b) {
+    return a + b; // Враќа збирот на a и b
+}
+
+int main() {
+    int broj1, broj2;
+    
+    cout << "Внесете два броја: ";
+    cin >> broj1 >> broj2;
+    
+    int rezultat = sobiranje(broj1, broj2);
+    cout << "Збирот е: " << rezultat << endl;
+    
+    return 0;
+}
+        </code></pre>
+    </div>
+
+    <div class="explanation">
+        <h3>Објаснување на примерот</h3>
+        <ul>
+            <li><strong>Функција Собирање:</strong> Оваа функција прима два целобројни аргументи и враќа целобројна вредност. Во телото на функцијата, таа го пресметува збирот на <code>a</code> и <code>b</code> и ја враќа оваа вредност.</li>
+            <li><strong>Повик на функцијата:</strong> Во <code>main()</code> функцијата, корисникот ги внесува два броја, кои потоа се проследуваат на <code>sobiranje</code> функцијата, и резултатот се прикажува.</li>
+        </ul>
+    </div>
+
+    <div class="back-button-container">
+        <a href="index.html" class="back-button">Врати се на почетната страница</a>
+    </div>
+</section>
+
+</body>
+</html>
